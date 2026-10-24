@@ -1,34 +1,42 @@
 # Python Diary
 
-## Features
+A small command-line diary program written in Python, built in two versions to practice file handling and databases.
 
-- Record the date.
-- Write about what you learned today.
-- Record your mood.
-- Save diary entries to a text file.
-- Display the saved diary content.
+## Files
 
-## Getting Staretd
-**1. Clone the Repository**
+| File | Storage | Description |
+|------|---------|-------------|
+| `diary.py` | Text file | Saves each entry (date, what I learned, mood) by appending to a `.txt` file |
+| `diary_db.py` | SQLite database | Saves the same entries into a `.db` file and prints them all back |
 
-```git clone https://github.com/BubbleF1sh/Python_Lab```
+## Requirements
 
-**2. Run the Program**
+- Python 3 (tested on 3.14)
+- No extra packages needed: `sqlite3` is part of the Python standard library
 
-Open the terminal of this project and run:
+## Usage
 
-```py diary.py diary.txt```
+### Text file version
 
-**3.Use the Project**
-Follow the prompts to enter:
+```
+py diary.py diary.txt
+```
 
-1. The date.
+### SQLite version
 
-2. What you learned today.
+```
+py diary_db.py 
+```
+*The database file is created automatically in the same folder on the first run.*
 
-3. Your mood.
+Both programs ask three questions (date, what you learned, mood), save the answers, and then show your diary.
 
-The program saves the diary entry to diary.txt and displays the saved content.
+## What I practiced
 
-## Project Status
-This project is under developement. More features may be added as I continue learning Python
+- Command-line arguments with `argv`
+- Reading and writing files, and the `with` statement
+- SQL basics with `sqlite3`: `CREATE TABLE`, `INSERT`, `SELECT`, parameterized queries, `commit`
+
+## Privacy
+
+Diary data files (`*.txt` and `*.db`) are excluded by `.gitignore`, so personal entries are never uploaded.

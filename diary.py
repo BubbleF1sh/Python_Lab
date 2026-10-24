@@ -7,8 +7,6 @@ if len(argv)!=2:
     
 script, file_name = argv
 
-
-
 print("Does the file exist?", exists(file_name))
 
 date=input("Whats today date? ")
